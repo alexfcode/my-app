@@ -1,41 +1,26 @@
 import "./App.css";
 import { StyledBtn } from "./components/Button.styled";
-import { SupperButton } from "./components/Button.styled";
 import { Link } from "./components/link.styled";
-import { Menu } from "./components/Menu.styled";
+// import { Menu } from "./components/Menu.styled";
 import styled from "styled-components";
 
 function App() {
   return (
     <div className="App">
-      <Menu>
-        <ul>
-          <li>
-            <a>menu item 1</a>
-          </li>
-          <li>
-            <a>menu item 2</a>
-          </li>
-          <li>
-            <a>menu item 3</a>
-          </li>
-        </ul>
-      </Menu>
-
       <Box>
-        <StyledBtn as={Link} href={"#"}>
-          LinkComponent
+        {/* <StyledBtn color="red" fontSize={"20px"}>
+          Hello
         </StyledBtn>
-        <StyledBtn>Hello</StyledBtn>
-        <SupperButton>SupperButton</SupperButton>
+        <StyledBtn color="green">Bye!</StyledBtn> */}
+        {/* <StyledBtn fontSize={"30px"}>Niger!!!!</StyledBtn> */}
+        <StyledBtn btnType="primary">Niger!!!!</StyledBtn>
+        <StyledBtn btnType="outlined">Niger!!!!</StyledBtn>
       </Box>
     </div>
   );
 }
 
 export default App;
-
-
 
 const Box = styled.div`
   height: 100vh;
@@ -51,5 +36,8 @@ const Box = styled.div`
   ${Link} {
     cursor: zoom-in;
   }
+
+  @media screen and (max-width: 800px) {
+    flex-direction: column;
+  }
 `;
-;

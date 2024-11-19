@@ -1,4 +1,4 @@
-import styled from "styled-components"
+import styled from "styled-components";
 
 export const Link = styled.a`
   color: #2970a0;
@@ -6,4 +6,4 @@ export const Link = styled.a`
   font-weight: bold;
   padding: 0px;
   background-color: transparent;
-  `
+`;

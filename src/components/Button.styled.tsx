@@ -1,25 +1,44 @@
-import styled from "styled-components"
+import styled, { css } from "styled-components";
+import { MyAnimation } from "../styles/animations/animations";
+import { isPropertySignature } from "typescript";
 
-export const StyledBtn = styled.button`
+type StyledBtnPropsType = {
+  color?: string;
+  fontSize?: string;
+  btnType?: "primary" | "outlined";
+};
+
+export const StyledBtn = styled.button<StyledBtnPropsType>`
   border: none;
-  background-color: #fb3f78;
+  border-radius: 10px;
   padding: 10px 20px;
-  color: snow;
-  font-size: 2rem;
+  font-size: ${(props) => props.fontSize || "2rem"};
   font-weight: bold;
-&:hover {
-  background-color: #59cbe7;
-  transition: 0.2s;
-}
 
-&:last-child {
-  background-color: #fbb93f;
-}
+  //outlined
+  ${(props) =>
+    props.btnType === "outlined" &&
+    css<StyledBtnPropsType>`
+      border: 2px solid ${(props) => props.color || "#fb3f78"};
+      color: ${(props) => props.color || "#fb3f78"};
+      background-color: transparent;
 
-`
+      &:hover {
+        border-color: #4053cc;
+        color: #4053cc;
+        background-color: transparent;
+      }
+    `}
 
-export const SupperButton = styled(StyledBtn)`
-  border-radius: 5px;
-  background-color: yellow;
-  color: black;
+  //primary
+  ${(props) =>
+    props.btnType === "primary" &&
+    css<StyledBtnPropsType>`
+      color: snow;
+      background-color: ${(props) => props.color || "#fb3f78"};
+
+      &:hover {
+        background-color: #4053cc;
+      }
+    `}
 `;
