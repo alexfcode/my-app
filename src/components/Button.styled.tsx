@@ -6,6 +6,7 @@ type StyledBtnPropsType = {
   color?: string;
   fontSize?: string;
   btnType?: "primary" | "outlined";
+  active?: boolean
 };
 
 export const StyledBtn = styled.button<StyledBtnPropsType>`
@@ -40,5 +41,9 @@ export const StyledBtn = styled.button<StyledBtnPropsType>`
       &:hover {
         background-color: #4053cc;
       }
+    `}
+
+    ${(props) => props.active && css<StyledBtnPropsType>`
+    box-shadow: 5px 5px 5px 5px #40414d
     `}
 `;
