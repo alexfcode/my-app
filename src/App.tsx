@@ -6,6 +6,15 @@ import styled from "styled-components";
 function App() {
   return (
     <div className="App">
+
+      <Menu>
+        <ul>
+          <li><a href="">menu item 1</a></li>
+          <li><a href="">menu item 2</a></li>
+          <li><a href="">menu item 3</a></li>
+        </ul>
+      </Menu>
+
       <Box>
         <StyledBtn as={Link} href={"#"}>LinkComponent</StyledBtn>
         <StyledBtn>Hello</StyledBtn>
@@ -25,6 +34,15 @@ const StyledBtn = styled.button`
   color: snow;
   font-size: 2rem;
   font-weight: bold;
+&:hover {
+  background-color: #59cbe7;
+  transition: 0.2s;
+}
+
+&:last-child {
+  background-color: #fbb93f;
+}
+
 `
 
 const Link = styled.a`
@@ -47,7 +65,32 @@ height: 100vh;
 display: flex;
 justify-content: center;
 align-items: center;
-gap: 10px;
+gap: 20px;
+
+button {
+  cursor: pointer;
+}
+
+${Link} {
+  cursor: zoom-in;
+}
+
 `
+const Menu = styled.nav`
+  ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+
+    li > a {
+      color: green;
+    }
+
+    li + li {
+      margin-left: 20px;
+    }
+  }
+`
+
 ;
 
