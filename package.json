@@ -1,7 +1,7 @@
 {
   "name": "my-app",
   "version": "0.1.0",
-  "homepage": "https://github.com/alexfcode/my-app",
+  "homepage": "https://alexfcode.github.io/alexfcode/my-app",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.14.1",
