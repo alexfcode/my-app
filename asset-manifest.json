@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/alexfcode/my-app/static/css/main.31d6cfe0.css",
+    "main.js": "/alexfcode/my-app/static/js/main.2ce9237b.js",
+    "static/js/453.ed3810f9.chunk.js": "/alexfcode/my-app/static/js/453.ed3810f9.chunk.js",
+    "index.html": "/alexfcode/my-app/index.html",
+    "main.2ce9237b.js.map": "/alexfcode/my-app/static/js/main.2ce9237b.js.map",
+    "453.ed3810f9.chunk.js.map": "/alexfcode/my-app/static/js/453.ed3810f9.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.31d6cfe0.css",
+    "static/js/main.2ce9237b.js"
+  ]
+}
