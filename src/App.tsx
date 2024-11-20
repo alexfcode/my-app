@@ -3,18 +3,14 @@ import { StyledBtn } from "./components/Button.styled";
 import { Link } from "./components/link.styled";
 // import { Menu } from "./components/Menu.styled";
 import styled from "styled-components";
+import { myTheme } from "./styles/Theme.styled";
 
 function App() {
   return (
     <div className="App">
       <Box>
-        {/* <StyledBtn color="red" fontSize={"20px"}>
-          Hello
-        </StyledBtn>
-        <StyledBtn color="green">Bye!</StyledBtn> */}
-        {/* <StyledBtn fontSize={"30px"}>Niger!!!!</StyledBtn> */}
-        <StyledBtn btnType="primary" active>Niger!!!!</StyledBtn>
-        <StyledBtn btnType="outlined">Niger!!!!</StyledBtn>
+        <StyledBtn color={myTheme.colors.primary} btnType="primary" active>Niger!!!!</StyledBtn>
+        <StyledBtn color={myTheme.colors.secondary} btnType="outlined">Niger!!!!</StyledBtn>
       </Box>
     </div>
   );
@@ -37,7 +33,7 @@ const Box = styled.div`
     cursor: zoom-in;
   }
 
-  @media screen and (max-width: 800px) {
+  @media ${myTheme.media.tablet} {
     flex-direction: column;
   }
 `;
